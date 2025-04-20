@@ -18,7 +18,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Banner refinado */
+/* Banner limpo */
 .site-header {
   background: url('banner.png') top/cover no-repeat;
   color: #ffffff;
@@ -32,11 +32,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4); /* leve transparência sem faixas visíveis */
-  padding: 15px;
-  border-radius: 12px;
+  padding: 0;
+  margin: 0;
 }
 
+/* Avatar e texto */
 .avatar-large {
   width: 100px;
   height: 100px;
@@ -56,7 +56,7 @@ html, body {
   color: #90cdf4;
 }
 
-/* Menu de navegação refinado */
+/* Menu de navegação */
 .main-nav {
   background-color: #1b2b3f;
   padding: 12px 0;
@@ -87,7 +87,7 @@ html, body {
   background-color: #007acc;
 }
 
-/* Área de conteúdo central - restaurado */
+/* Conteúdo central */
 .content {
   background-color: #e3f7ff;
   color: #111;
