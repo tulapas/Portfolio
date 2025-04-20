@@ -15,10 +15,10 @@ body {
 
 /* Layout principal */
 .site-header {
-  background-color: #12121c;
+  background: url('A_digital_graphic_design_banner_showcases_Thalles_.png') center/cover no-repeat;
   color: #ffffff;
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 100px 20px 40px;
   border-bottom: 3px solid #007acc;
   position: relative;
 }
@@ -27,6 +27,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .avatar-large {
@@ -38,29 +41,37 @@ body {
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #90cdf4;
 }
 
 /* Menu de navegação */
+.main-nav {
+  background-color: #1b2b3f;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
 .main-nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-top: 20px;
+  margin: 0;
   padding: 0;
-  gap: 20px;
+  gap: 30px;
 }
 
 .main-nav ul li a {
   color: #ffffff;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 10px 20px;
+  font-weight: 500;
   border-radius: 6px;
   transition: background 0.3s ease;
 }
@@ -71,13 +82,13 @@ body {
 
 /* Área de conteúdo central */
 .content {
-  background-color: #f0f4f8;
+  background-color: #e3f7ff;
   color: #111;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  max-width: 860px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 80, 150, 0.6);
 }
 
 /* Seções */
@@ -88,10 +99,12 @@ body {
 .intro h2, section h2 {
   color: #007acc;
   margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 section p {
   margin-bottom: 10px;
+  font-size: 1.05rem;
 }
 
 /* Footer */
@@ -103,7 +116,7 @@ section p {
   margin-top: 60px;
 }
 
-/* Animações */
+/* Transições suaves */
 a, .main-nav ul li a {
   transition: all 0.3s ease;
 }
@@ -111,11 +124,11 @@ a, .main-nav ul li a {
 @media screen and (max-width: 768px) {
   .main-nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .content {
     margin: 20px;
-    padding: 20px;
+    padding: 25px;
   }
 }
