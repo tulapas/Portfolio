@@ -164,3 +164,17 @@ a, .main-nav ul li a {
     background-color: #FFFFFF;
     color: #0e0e1a; /* Usei a cor de fundo do seu body para um bom contraste */
 }
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 90%; /* Ajuste a escala para mobile, se necessário */
+  }
+}
