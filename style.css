@@ -73,7 +73,7 @@ body {
     color: #999;
 }
 
-/* Estilos para o botão de troca de idioma (Você pode ter um código um pouco diferente, mas este deve funcionar) */
+/* Estilos para o botão de troca de idioma */
 .lang-container {
     position: fixed;
     top: 20px;
