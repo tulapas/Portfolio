@@ -139,3 +139,24 @@ a, .main-nav ul li a {
     padding: 25px;
   }
 }
+
+.navbar .lang-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Epilogue', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar .lang-switcher:hover {
+  background-color: #FFFFFF;
+  color: #333333;
+}
