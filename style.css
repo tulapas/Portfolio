@@ -1,76 +1,143 @@
-/* Estilos gerais do site */
-body {
-    background-color: #0b1a2c;
-    color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e0e1a;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Banner limpo */
 .site-header {
-    background-color: #0c1c2e;
-    padding: 40px 0 20px;
-    text-align: center;
+  background: url('banner.png') top/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px 30px;
+  border-bottom: 3px solid #007acc;
+  margin: 0;
 }
 
 .container-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .avatar-large {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #007acc;
+  margin-bottom: 10px;
 }
 
 .title {
-    font-size: 2.5em;
-    margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    margin: 0;
+  font-size: 1rem;
+  color: #90cdf4;
+}
+
+/* Menu de navegação */
+.main-nav {
+  background-color: #1b2b3f;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  width: 100%;
 }
 
 .main-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  gap: 30px;
+  max-width: 100%;
 }
 
-.main-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.main-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
+.main-nav ul li a:hover {
+  background-color: #007acc;
+}
+
+/* Conteúdo central */
 .content {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+  background-color: #e3f7ff;
+  color: #111;
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 80, 150, 0.6);
+  text-align: left;
 }
 
-.intro {
-    background-color: #122842;
-    padding: 30px;
-    border-radius: 10px;
+/* Seções */
+.intro, .games-list, section {
+  margin-bottom: 40px;
 }
 
-.intro h2 {
-    color: #00b0ff;
+.intro h2, section h2 {
+  color: #007acc;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
+section p {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* Footer */
 .site-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    color: #999;
+  text-align: center;
+  padding: 20px;
+  background-color: #12121c;
+  color: #999;
+  margin-top: 60px;
+}
+
+/* Transições suaves */
+a, .main-nav ul li a {
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content {
+    margin: 20px;
+    padding: 25px;
+  }
 }
 
 /* Estilos para o botão de troca de idioma */
@@ -81,19 +148,19 @@ body {
     z-index: 9999;
 }
 
-.lang-switcher {
+.lang-container a {
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     padding: 8px 12px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.3s ease;
     margin-left: 5px;
 }
 
-.lang-switcher:hover {
+.lang-container a:hover {
     background-color: #FFFFFF;
-    color: #333333;
+    color: #0e0e1a; /* Usei a cor de fundo do seu body para um bom contraste */
 }
