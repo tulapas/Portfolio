@@ -44,5 +44,34 @@
   <footer class="site-footer">
     <p>&copy; 2025 Thalles Paiva</p>
   </footer>
+
+
+  <script>
+function setLanguage(lang) {
+  // Salva a escolha de idioma no armazenamento local do navegador
+  localStorage.setItem('lang', lang);
+  location.reload(); // Recarrega a página para aplicar a mudança
+}
+
+function loadLanguage() {
+  // Carrega a preferência de idioma do armazenamento local
+  const savedLang = localStorage.getItem('lang') || 'pt-BR'; // Assume pt-BR como padrão
+  
+  // Obtém o idioma da página atual
+  const currentPageLang = document.documentElement.lang;
+  
+  // Se o idioma salvo for diferente do da página atual, redireciona
+  if (savedLang !== currentPageLang) {
+    if (savedLang === 'en') {
+      window.location.href = 'index_en.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+  }
+}
+
+window.onload = loadLanguage;
+</script>
+  
 </body>
 </html>
