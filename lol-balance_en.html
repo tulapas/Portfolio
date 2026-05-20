@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoL Balance AI | Thalles Paiva</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lang-container">
+    <a href="#" onclick="setLanguage('pt-BR')">PT-BR</a>
+    <a href="#" onclick="setLanguage('en')">EN</a>
+  </div>
+  
+  <header class="site-header">
+    <div class="container-header" style="flex-direction: row; justify-content: center; gap: 20px;">
+      <img src="Logo.jpg" alt="Thalles's Avatar" class="avatar-large" />
+      <div style="text-align: left;">
+        <h1 class="title">THALLES PAIVA</h1>
+        <p class="subtitle">LEVEL AND GAME DESIGNER</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="research.html">Research & Systems</a></li>
+        <li><a href="resume.html">Skills & Experience</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Analytical Balance Assistant (League of Legends)</h2>
+      <p style="color: #007acc; font-weight: bold;">MBA Capstone Project - Ibmec BH</p>
+      
+      <h3 style="margin-top: 20px;">The Objective</h3>
+      <p>This project demonstrates the application of data science to solve a critical issue in the gaming industry: competitive imbalance[cite: 89]. The main goal was to develop an analytical tool using public data to automatically diagnose balance issues and provide actionable insights for developers[cite: 90].</p>
+
+      <h3 style="margin-top: 20px;">Methodology & Data Collection</h3>
+      <p>To ensure relevance, data was collected via the Riot API, focusing exclusively on matches from the highest competitive tiers (Challenger, Grandmaster, and Master) on the Korean (KR) server[cite: 100, 102]. The process captured comprehensive match details, including champion picks, built items, and duration[cite: 105].</p>
+
+      <h3 style="margin-top: 20px;">Modeling & Results</h3>
+      <p>A predictive model using the Random Forest algorithm was developed, achieving an 0.87 accuracy rate in predicting match outcomes (win or loss)[cite: 119, 124]. Feature importance metrics revealed crucial insights:</p>
+      <ul style="margin-left: 20px; margin-bottom: 20px;">
+        <li><strong>Item Impact:</strong> The analysis showed that specific items (like Ionian Boots of Lucidity and Plated Steelcaps) have a higher impact on winning than individual champions or runes[cite: 129, 130].</li>
+        <li><strong>Synergies:</strong> The model identified that balancing should not focus solely on the champion, but on how they interact with key runes and game mechanics[cite: 131, 132].</li>
+      </ul>
+      <p>This tool acts as a "balance assistant" that goes beyond superficial analysis, diagnosing root causes and enabling fast, evidence-based decision-making to maintain the integrity of the competitive ecosystem[cite: 97, 134].</p>
+    </section>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2025 Thalles Paiva</p></footer>
+  <script>
+    function setLanguage(lang) { localStorage.setItem('lang', lang); location.reload(); }
+    function loadLanguage() { const savedLang = localStorage.getItem('lang') || 'en'; const currentPageLang = document.documentElement.lang; if (savedLang !== currentPageLang) { if (savedLang === 'en') { window.location.href = 'lol-balance_en.html'; } else { window.location.href = 'lol-balance.html'; } } } window.onload = loadLanguage;
+  </script>
+</body>
+</html>
