@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balanceamento LoL | Thalles Paiva</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lang-container">
+    <a href="#" onclick="setLanguage('pt-BR')">PT-BR</a>
+    <a href="#" onclick="setLanguage('en')">EN</a>
+  </div>
+  
+  <header class="site-header">
+    <div class="container-header" style="flex-direction: row; justify-content: center; gap: 20px;">
+      <img src="Logo.jpg" alt="Avatar Thalles" class="avatar-large" />
+      <div style="text-align: left;">
+        <h1 class="title">THALLES PAIVA</h1>
+        <p class="subtitle">LEVEL AND GAME DESIGNER</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="pesquisa.html">Pesquisa e Sistemas</a></li>
+        <li><a href="curriculo.html">Habilidades e Experiências</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Assistente Analítico de Balanceamento (League of Legends)</h2>
+      <p style="color: #007acc; font-weight: bold;">Projeto de Conclusão de Curso (MBA) - Ibmec BH</p>
+      
+      <h3 style="margin-top: 20px;">O Problema</h3>
+      <p>Este projeto demonstra a aplicação da ciência de dados para resolver um problema crítico na indústria de jogos: o desequilíbrio competitivo[cite: 89]. O objetivo principal foi desenvolver uma ferramenta analítica utilizando dados públicos para diagnosticar problemas de balanceamento de forma automatizada e fornecer insights acionáveis para os desenvolvedores[cite: 90].</p>
+
+      <h3 style="margin-top: 20px;">Metodologia e Coleta de Dados</h3>
+      <p>Para garantir a relevância da análise, os dados foram coletados através da Riot API, focando exclusivamente em partidas da mais alta patente competitiva (Desafiante, Grão-Mestre e Mestre) do servidor coreano (KR)[cite: 100, 102]. O processo capturou detalhes completos de cada partida, incluindo escolhas de campeões, itens construídos e duração[cite: 105].</p>
+
+      <h3 style="margin-top: 20px;">Modelagem e Resultados</h3>
+      <p>Foi desenvolvido um modelo preditivo utilizando o algoritmo Random Forest, que alcançou uma precisão de 0.87 na previsão do resultado de partidas (vitória ou derrota)[cite: 119, 124]. As métricas de importância revelaram insights cruciais:</p>
+      <ul style="margin-left: 20px; margin-bottom: 20px;">
+        <li><strong>Impacto de Itens:</strong> A análise mostrou que itens específicos (como Ionian Boots of Lucidity e Plated Steelcaps) têm maior impacto na vitória, superando a influência individual de campeões ou runas[cite: 129, 130].</li>
+        <li><strong>Sinergias:</strong> O modelo identificou que o balanceamento não deve focar apenas no campeão, mas em como ele interage com runas-chave e mecânicas do jogo[cite: 131, 132].</li>
+      </ul>
+      <p>Esta ferramenta atua como um "assistente de balanceamento" que vai além da análise superficial, diagnosticando causas raízes e permitindo uma tomada de decisão rápida e baseada em evidências para manter a integridade do ecossistema competitivo[cite: 97, 134].</p>
+    </section>
+  </main>
+  
+  <footer class="site-footer"><p>&copy; 2025 Thalles Paiva</p></footer>
+  <script>
+    function setLanguage(lang) { localStorage.setItem('lang', lang); location.reload(); }
+    function loadLanguage() { const savedLang = localStorage.getItem('lang') || 'en'; const currentPageLang = document.documentElement.lang; if (savedLang !== currentPageLang) { if (savedLang === 'en') { window.location.href = 'lol-balance_en.html'; } else { window.location.href = 'lol-balance.html'; } } } window.onload = loadLanguage;
+  </script>
+</body>
+</html>
