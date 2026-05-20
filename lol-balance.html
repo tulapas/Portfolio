@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Balanceamento LoL | Thalles Paiva</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-image-container { text-align: center; margin: 30px 0; background: #f0faff; padding: 20px; border-radius: 8px; border: 2px dashed #007acc; }
+    .project-image-placeholder { color: #007acc; font-style: italic; font-size: 0.95rem; }
+    .project-image { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: none; /* Remova o display:none quando colocar sua imagem */ }
+  </style>
 </head>
 <body>
   <div class="lang-container">
@@ -32,22 +37,41 @@
 
   <main class="content">
     <section>
-      <h2>Assistente Analítico de Balanceamento (League of Legends)</h2>
-      <p style="color: #007acc; font-weight: bold;">Projeto de Conclusão de Curso (MBA) - Ibmec BH</p>
+      <h2 style="font-size: 2rem; color: #007acc;">Assistente Analítico de Balanceamento (League of Legends)</h2>
+      <p style="color: #555; font-weight: bold; font-size: 1.1rem; margin-bottom: 30px;">Projeto de Conclusão de Curso (MBA) - Ibmec BH</p>
       
-      <h3 style="margin-top: 20px;">O Problema</h3>
-      <p>Este projeto demonstra a aplicação da ciência de dados para resolver um problema crítico na indústria de jogos: o desequilíbrio competitivo[cite: 89]. O objetivo principal foi desenvolver uma ferramenta analítica utilizando dados públicos para diagnosticar problemas de balanceamento de forma automatizada e fornecer insights acionáveis para os desenvolvedores[cite: 90].</p>
+      <h3>1. O Desafio de Negócio</h3>
+      <p>O setor de jogos como serviço (GaaS) depende diretamente da retenção e do engajamento dos jogadores para manter sua lucratividade. Em ecossistemas competitivos como <em>League of Legends</em>, um meta desequilibrado torna as partidas previsíveis. Isso resulta em queda de interesse, o que afeta diretamente a receita da empresa (como a venda de itens cosméticos e skins) e cria riscos para a reputação da marca. O objetivo deste projeto foi construir uma ferramenta preditiva que atue como um assistente para os desenvolvedores, permitindo decisões baseadas em dados em vez de intuição.</p>
 
-      <h3 style="margin-top: 20px;">Metodologia e Coleta de Dados</h3>
-      <p>Para garantir a relevância da análise, os dados foram coletados através da Riot API, focando exclusivamente em partidas da mais alta patente competitiva (Desafiante, Grão-Mestre e Mestre) do servidor coreano (KR)[cite: 100, 102]. O processo capturou detalhes completos de cada partida, incluindo escolhas de campeões, itens construídos e duração[cite: 105].</p>
+      <div class="project-image-container">
+        <img src="seu_grafico_winrates.png" alt="Gráfico de Winrates Desbalanceados" class="project-image">
+        <p class="project-image-placeholder">[Sugestão de Imagem: Insira aqui um gráfico de barras ou dispersão mostrando a diferença de Taxa de Vitória (Winrate) e Taxa de Escolha (Pickrate) de campeões desbalanceados antes das correções.]</p>
+      </div>
 
-      <h3 style="margin-top: 20px;">Modelagem e Resultados</h3>
-      <p>Foi desenvolvido um modelo preditivo utilizando o algoritmo Random Forest, que alcançou uma precisão de 0.87 na previsão do resultado de partidas (vitória ou derrota)[cite: 119, 124]. As métricas de importância revelaram insights cruciais:</p>
-      <ul style="margin-left: 20px; margin-bottom: 20px;">
-        <li><strong>Impacto de Itens:</strong> A análise mostrou que itens específicos (como Ionian Boots of Lucidity e Plated Steelcaps) têm maior impacto na vitória, superando a influência individual de campeões ou runas[cite: 129, 130].</li>
-        <li><strong>Sinergias:</strong> O modelo identificou que o balanceamento não deve focar apenas no campeão, mas em como ele interage com runas-chave e mecânicas do jogo[cite: 131, 132].</li>
+      <h3 style="margin-top: 30px;">2. Engenharia de Dados e Preparação</h3>
+      <p>Os dados foram coletados através da Riot API, extraindo o histórico completo de partidas de jogadores das patentes Desafiante, Grão-Mestre e Mestre do servidor coreano (KR), garantindo um recorte onde o meta competitivo é executado no mais alto nível.</p>
+      <p>A fase de preparação foi extensa: os dados JSON aninhados foram "achatados" em DataFrames estruturados. Utilize a API Data Dragon para converter os IDs numéricos de itens em nomes compreensíveis. Além disso, criei uma feature crucial chamada "game_phase", categorizando o momento da partida (Early, Mid, Late Game) para permitir análises dinâmicas ao longo do tempo.</p>
+
+      <div class="project-image-container">
+        <img src="sua_arquitetura_dados.png" alt="Fluxo de Tratamento de Dados" class="project-image">
+        <p class="project-image-placeholder">[Sugestão de Imagem: Insira aqui um fluxograma (Pipeline) da extração de dados via Riot API até o armazenamento, ou um print do dataset tratado evidenciando as colunas de "game_phase".]</p>
+      </div>
+
+      <h3 style="margin-top: 30px;">3. Modelagem de Machine Learning e Sinergias</h3>
+      <p>O coração do sistema é um modelo Random Forest treinado para prever a vitória ou derrota com precisão de 0.87. O grande diferencial do modelo foi a engenharia de features baseada no contexto do design do jogo. Em vez de avaliar apenas o campeão isolado, o modelo avaliou a sinergia entre o Campeão e a Runa-chave (ex: Lee Sin + Conquistador), além de mapear a presença de cada item como variáveis binárias de impacto.</p>
+
+      <h3 style="margin-top: 30px;">4. Insights de Design Gerados</h3>
+      <p>A análise de "Feature Importance" do modelo quebrou alguns paradigmas básicos de balanceamento:</p>
+      <ul>
+        <li><strong>A Supremacia da Itemização:</strong> O modelo provou matematicamente que itens como <em>Ionian Boots of Lucidity</em> e <em>Plated Steelcaps</em> possuem mais peso para determinar o vencedor de uma partida do que o próprio kit base do campeão escolhido.</li>
+        <li><strong>Foco em Sistemas, não apenas em Heróis:</strong> A alta importância das sinergias demonstrou aos designers que o balanceamento focado apenas em "nerfar" um campeão é ineficiente; a raiz da toxidade competitiva geralmente reside na interação desse campeão com sistemas externos, como as runas.</li>
       </ul>
-      <p>Esta ferramenta atua como um "assistente de balanceamento" que vai além da análise superficial, diagnosticando causas raízes e permitindo uma tomada de decisão rápida e baseada em evidências para manter a integridade do ecossistema competitivo[cite: 97, 134].</p>
+
+      <div class="project-image-container">
+        <img src="seu_grafico_feature_importance.png" alt="Feature Importance - Random Forest" class="project-image">
+        <p class="project-image-placeholder">[Sugestão de Imagem: Insira aqui o gráfico gerado pelo Random Forest mostrando a Importância das Features (Feature Importance), destacando os itens e runas no topo do gráfico.]</p>
+      </div>
+
     </section>
   </main>
   
