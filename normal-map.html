@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plugin Normal Map | Thalles Paiva</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-image-container { text-align: center; margin: 30px 0; background: #f0faff; padding: 20px; border-radius: 8px; border: 2px dashed #007acc; }
+    .project-image-placeholder { color: #007acc; font-style: italic; font-size: 0.95rem; }
+    .project-image { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: none; }
+    .btn-paper { display: inline-block; background-color: #007acc; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; transition: 0.3s; }
+    .btn-paper:hover { background-color: #005f9e; }
+  </style>
 </head>
 <body>
   <div class="lang-container">
@@ -32,22 +39,50 @@
 
   <main class="content">
     <section>
-      <h2>Automação de Normal Maps para Jogos 2D (Plugin Unity)</h2>
-      <p style="color: #007acc; font-weight: bold;">Pesquisa de Mestrado - Universidade de Aveiro (Equipe Hó, Hô & Xo)</p>
+      <h2 style="font-size: 2rem; color: #007acc;">Automação de Normal Maps para Jogos 2D (Plugin Unity)</h2>
+      <p style="color: #555; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">Pesquisa de Mestrado - Universidade de Aveiro</p>
       
-      <h3 style="margin-top: 20px;">Visão Geral e Validação</h3>
-      <p>Artigo coautorado, aceito e apresentado no palco do Eurographics 2026. Desenvolvido em conjunto com Denis Borodin e Lucas Nascimento [cite: 196, 197], este projeto introduz um plugin customizado para Unity que resolve o gargalo de produção na criação manual de normal maps[cite: 205, 206]. A ferramenta extrai e gera mapas dinamicamente a partir dos valores de escala de cinza de pixel art 2D.</p>
+      <div style="text-align: center; margin: 30px 0;">
+        <a href="COLE_O_LINK_DO_SEU_PAPER_AQUI.pdf" class="btn-paper" target="_blank">📄 Ler o Artigo Completo (Publicado na Eurographics 2026)</a>
+      </div>
 
-      <h3 style="margin-top: 20px;">Dados de Desempenho e Eficiência</h3>
-      <p>Realizamos testes empíricos rigorosos com artistas profissionais que comprovaram a superioridade da ferramenta:</p>
-      <ul style="margin-left: 20px; margin-bottom: 20px;">
-        <li><strong>Salto de Produtividade:</strong> O tempo médio manual de produção caiu de 19 minutos para apenas 1 segundo por asset utilizando o plugin[cite: 218, 219]. Isso representa um aumento de eficiência de 1.140 vezes[cite: 220].</li>
-        <li><strong>Qualidade Estética:</strong> Em testes de percepção visual (blind study), os participantes preferiram os resultados gerados pelo plugin de forma unânime, destacando a profundidade realista e as transições suaves de luz e sombra[cite: 242, 252].</li>
-        <li><strong>Aprovação Profissional:</strong> A ferramenta atingiu 100% na taxa de recomendação de artistas para fluxos de trabalho profissionais, com uma nota média de usabilidade de 9.6/10[cite: 245, 248, 282].</li>
+      <h3>1. O Gargalo de Produção (Bottleneck)</h3>
+      <p>Em produções independentes de larga escala, o sombreamento dinâmico para pixel art sempre foi inviável[cite: 210]. O processo tradicional de pintura manual de luz e profundidade exige entre 2 e 30 minutos por sprite[cite: 207]. Nossa equipe (Hó, Hô & Xo) desenvolveu um algoritmo customizado para a Unity capaz de erradicar esse gargalo técnico, extraindo mapas de normais em tempo real através dos valores de escala de cinza[cite: 196, 206].</p>
+
+      <div class="project-image-container">
+        <img src="sua_imagem_comparativa.png" alt="Comparação Visual do Plugin" class="project-image">
+        <p class="project-image-placeholder">[Sugestão de Imagem: Aquela imagem clássica do documento onde mostra a caverna "flat" em cima e a caverna "com iluminação dinâmica e profundidade" embaixo.]</p>
+      </div>
+
+      <h3 style="margin-top: 30px;">2. Metodologia de Validação Empírica</h3>
+      <p>Para atestar a viabilidade comercial da ferramenta, conduzimos entrevistas estruturadas com cinco artistas de níveis de experiência variados em três fases[cite: 62, 64]:</p>
+      <ul>
+        <li><strong>Fase 1 (Teste de Eficiência):</strong> Comparação direta de cronometragem entre o trabalho humano e a automação[cite: 65, 66].</li>
+        <li><strong>Fase 2 (Estudo Cego):</strong> Exibição de cenários lado a lado para avaliar a precisão visual percebida[cite: 67, 68].</li>
+        <li><strong>Fase 3 (Avaliação de Usabilidade):</strong> Aplicação prática do plugin pelos artistas dentro da Unity[cite: 69].</li>
       </ul>
 
-      <h3 style="margin-top: 20px;">Impacto Prático: Jogo "Other Half"</h3>
-      <p>Como Gerente de Projeto, Game Designer e Artista de Pixel no jogo <em>Other Half</em>, a integração dessa tecnologia foi uma necessidade estratégica[cite: 42, 44]. Manter os assets base com "baixo detalhe" e delegar a complexidade de luz e sombra para o plugin me permitiu recuperar horas de trabalho manual intenso[cite: 48, 49]. Pude redirecionar esse tempo diretamente para o refinamento do level design e a expansão da nossa biblioteca de assets, resultando em um mundo muito mais imersivo e coeso[cite: 50, 55].</p>
+      <div class="project-image-container">
+        <img src="seu_grafico_tempo.png" alt="Gráfico de Comparação de Tempo" class="project-image">
+        <p class="project-image-placeholder">[Sugestão de Imagem: O gráfico de barras horizontal (Productivity Leap Graph) mostrando "Manual = 1140 segundos" e "Plugin = 1 segundo".]</p>
+      </div>
+
+      <h3 style="margin-top: 30px;">3. Resultados Alcançados</h3>
+      <p>A evidência empírica coletada redefiniu as possibilidades do fluxo de trabalho em jogos 2D[cite: 277]:</p>
+      <ul>
+        <li><strong>Eficiência Inédita:</strong> O plugin registrou o tempo de processamento de 1 segundo por imagem frente aos 19 minutos (1.140 segundos) de média humana, um ganho massivo de 1.140 vezes[cite: 218, 219, 220].</li>
+        <li><strong>Precisão Estética:</strong> 100% dos artistas preferiram os gradientes gerados pela automação, apontando que as transições capturavam detalhes exaustivos de replicar à mão[cite: 73, 74, 281].</li>
+        <li><strong>Aplicação Prática no projeto "Other Half":</strong> Como Game Designer e Artista do projeto, a ferramenta me permitiu focar na estruturação rápida da base artística, poupando semanas de trabalho braçal e garantindo o tempo necessário para refinar o Level Design e a narrativa[cite: 48, 50, 51].</li>
+      </ul>
+
+      <div class="project-image-container">
+        <img src="seu_grafico_feedback.png" alt="Gráfico de Recomendação dos Artistas" class="project-image">
+        <p class="project-image-placeholder">[Sugestão de Imagem: O gráfico de pizza azul mostrando os 100% de recomendação (Artist Recommendation Rate) da ferramenta para uso profissional.]</p>
+      </div>
+
+      <h3 style="margin-top: 30px;">4. Roadmap Futuro (Pipeline PBR)</h3>
+      <p>Como consequência do sucesso da pesquisa, a ferramenta continuará evoluindo para um pipeline PBR (Physically Based Rendering) completo, integrando a geração automática de mapas de <em>Roughness</em> e <em>Metallic</em> e a inclusão de uma janela de <em>Live Preview</em> para edição em tempo real dentro do motor de jogo[cite: 266, 267, 270].</p>
+
     </section>
   </main>
   
