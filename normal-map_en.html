@@ -40,53 +40,41 @@
   <main class="content">
     <section>
       <h2 style="font-size: 2rem; color: #007acc;">High-Performance Automated Normal Mapping for 2D Games</h2>
-      <p style="color: #555; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">Master's Research - Universidade de Aveiro (Team Hó, Hô & Xo) [cite: 196, 198]</p>
+      <p style="color: #555; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">Master's Research - Universidade de Aveiro</p>
       
       <div style="text-align: center; margin: 30px 0;">
-        <a href="YOUR_PAPER_LINK_HERE.pdf" class="btn-paper" target="_blank">📄 Read Full Academic Paper (Presented at Eurographics 2026)</a>
+        <a href="https://diglib.eg.org/items/b5c85331-2bdc-4df9-936e-84dfaa530da5" class="btn-paper" target="_blank">📄 Read Full Academic Paper (Presented at Eurographics 2026)</a>
       </div>
 
       <h3>1. The Production Bottleneck</h3>
-      <p>In large-scale independent 2D game development, manual creation of normal maps for pixel art is a prohibitively slow and exhausting process[cite: 206, 278]. Traditional workflows require anywhere from 2 to over 30 minutes per sprite to manually paint lighting vectors and faux depth data[cite: 207]. For small indie teams handling large asset pools (100+ sprites), this technical bottleneck makes rich, dynamic 3D lighting pipelines scalable or entirely unfeasible[cite: 46, 210]. To eliminate this issue, our research team developed a custom algorithmic Unity plugin that automatically extracts and computes accurate normal maps from 2D pixel art grayscale profiles[cite: 60, 198].</p>
+      <p>In large-scale independent 2D game development, manual creation of normal maps for pixel art is a prohibitively slow and exhausting process. Traditional workflows require anywhere from 2 to over 30 minutes per sprite to manually paint lighting vectors and faux depth data. For small indie teams handling large asset pools (100+ sprites), this technical bottleneck makes rich, dynamic 3D lighting pipelines scalable or entirely unfeasible. To eliminate this issue, our research team developed a custom algorithmic Unity plugin that automatically extracts and computes accurate normal maps from 2D pixel art grayscale profiles.</p>
 
-      <div class="project-image-container">
-        <img src="lighting_comparison.png" alt="Dynamic Lighting Comparison" class="project-image">
-        <p class="project-image-placeholder">[Image Placeholder: Insert the side-by-side environmental rendering comparison here, showing the flat 2D scene on top versus the dynamic, depth-mapped plugin lighting on the bottom.]</p>
-      </div>
 
       <h3 style="margin-top: 30px;">2. Empirical Validation Methodology</h3>
-      <p>To rigorously evaluate the commercial and technical viability of the solution, we gathered empirical data by testing human performance against our automated system[cite: 60, 61]. Five artists with diverse industry backgrounds—ranging from seasoned professionals to beginners who had never built normal maps manually—participated in a three-phase study[cite: 62, 63, 64]:</p>
+      <p>To rigorously evaluate the commercial and technical viability of the solution, we gathered empirical data by testing human performance against our automated system. Five artists with diverse industry backgrounds—ranging from seasoned professionals to beginners who had never built normal maps manually—participated in a three-phase study:</p>
       <ul>
-        <li><strong>Phase 1 (Efficiency Trial):</strong> Recording precise execution times as participants manually mapped a base asset, establishing a comparative baseline against the plugin's execution speed[cite: 65, 66].</li>
-        <li><strong>Phase 2 (Blind Study Perception Test):</strong> Presenting participants with four game scenes, each containing hidden algorithmic versus manual asset pairs, to evaluate rendering depth and accuracy[cite: 67, 240].</li>
-        <li><strong>Phase 3 (Usability Assessment):</strong> Gathering structured qualitative and technical form data as participants operated the software solution directly inside the Unity editor[cite: 69].</li>
+        <li><strong>Phase 1 (Efficiency Trial):</strong> Recording precise execution times as participants manually mapped a base asset, establishing a comparative baseline against the plugin's execution speed.</li>
+        <li><strong>Phase 2 (Blind Study Perception Test):</strong> Presenting participants with four game scenes, each containing hidden algorithmic versus manual asset pairs, to evaluate rendering depth and accuracy.</li>
+        <li><strong>Phase 3 (Usability Assessment):</strong> Gathering structured qualitative and technical form data as participants operated the software solution directly inside the Unity editor.</li>
       </ul>
 
-      <div class="project-image-container">
-        <img src="productivity_leap_graph.png" alt="Productivity Leap Chart" class="project-image">
-        <p class="project-image-placeholder">[Image Placeholder: Insert your horizontal 'Productivity Leap Graph' here, showing the manual time bar averaging 1,140 seconds versus the plugin processing time bar sitting at a sharp 1 second.]</p>
-      </div>
 
       <h3 style="margin-top: 30px;">3. Key Results & Core Metrics</h3>
-      <p>The statistical data verified a monumental breakthrough for asset pipeline engineering[cite: 70, 279]:</p>
+      <p>The statistical data verified a monumental breakthrough for asset pipeline engineering:</p>
       <ul>
-        <li><strong>1,140x Efficiency Leap:</strong> While the average manual creation time per asset for professional artists hovered around 19 minutes (1,140 seconds) [cite: 71, 218], the automated tool compiled maps instantly in 1 second, showing a massive productivity spike[cite: 72, 219, 220].</li>
-        <li><strong>Flawless Perceptual Accuracy:</strong> In 100% of cases, blind study participants accurately singled out and preferred the automated scenes, rating the software's lighting gradients and shadow step transitions as smoother and more realistic than manual labor[cite: 73, 74, 242, 243].</li>
-        <li><strong>Industry Usability Validation:</strong> The tool received a near-perfect usability metric of 9.6/10, alongside a unanimous 100% approval rating from artists recommending its integration into commercial indie pipelines[cite: 75, 282].</li>
-        <li><strong>Workflow Impact on 'Other Half':</strong> Serving as the Project Manager, Lead Artist, and Game Designer on our master's project, integrating this tool was a vital strategic move[cite: 44]. Intentionally authoring "low-detail" foundational pixel art and delegating dithering or shadow math to the software allowed me to reclaim weeks of production time[cite: 48, 49, 51]. This saved labor was reallocated directly into polishing level layouts, game flow, and mechanics[cite: 50].</li>
+        <li><strong>1,140x Efficiency Leap:</strong> While the average manual creation time per asset for professional artists hovered around 19 minutes (1,140 seconds), the automated tool compiled maps instantly in 1 second, showing a massive productivity spike.</li>
+        <li><strong>Flawless Perceptual Accuracy:</strong> In 100% of cases, blind study participants accurately singled out and preferred the automated scenes, rating the software's lighting gradients and shadow step transitions as smoother and more realistic than manual labor.</li>
+        <li><strong>Industry Usability Validation:</strong> The tool received a near-perfect usability metric of 9.6/10, alongside a unanimous 100% approval rating from artists recommending its integration into commercial indie pipelines.</li>
+        <li><strong>Workflow Impact on 'Other Half':</strong> Serving as the Project Manager, Lead Artist, and Game Designer on our master's project, integrating this tool was a vital strategic move. Intentionally authoring "low-detail" foundational pixel art and delegating dithering or shadow math to the software allowed me to reclaim weeks of production time. This saved labor was reallocated directly into polishing level layouts, game flow, and mechanics.</li>
       </ul>
 
-      <div class="project-image-container">
-        <img src="artist_recommendation_chart.png" alt="Artist Recommendation Rate" class="project-image">
-        <p class="project-image-placeholder">[Image Placeholder: Insert the pie chart here showing the 100% 'Artist Recommendation Rate' for commercial adoption.]</p>
-      </div>
 
       <h3 style="margin-top: 30px;">4. Future Roadmap</h3>
-      <p>Driven by academic feedback and identified developer constraints, the standalone project is actively expanding into a holistic Physically Based Rendering (PBR) suite[cite: 265, 266]:</p>
+      <p>Driven by academic feedback and identified developer constraints, the standalone project is actively expanding into a holistic Physically Based Rendering (PBR) suite:</p>
       <ul>
-        <li><strong>Phase 1: Material Mapping:</strong> Integrating automated Roughness and Metallic map extraction to allow pixel textures to respond dynamically across different physical values (e.g., stone vs. metal)[cite: 267].</li>
-        <li><strong>Phase 2: Live Previews:</strong> Implementing an active editor view window to visualize real-time directional light shifts directly in Unity without entering Play Mode[cite: 270].</li>
-        <li><strong>Phase 3: Smart Filters:</strong> Using advanced edge-detection algorithms to minimize structural artifacts on highly complex asset geometries, such as hair or semi-transparent visual effects[cite: 272].</li>
+        <li><strong>Phase 1: Material Mapping:</strong> Integrating automated Roughness and Metallic map extraction to allow pixel textures to respond dynamically across different physical values (e.g., stone vs. metal).</li>
+        <li><strong>Phase 2: Live Previews:</strong> Implementing an active editor view window to visualize real-time directional light shifts directly in Unity without entering Play Mode.</li>
+        <li><strong>Phase 3: Smart Filters:</strong> Using advanced edge-detection algorithms to minimize structural artifacts on highly complex asset geometries, such as hair or semi-transparent visual effects.</li>
       </ul>
     </section>
   </main>
